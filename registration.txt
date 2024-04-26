@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <style>
+      body{
+margin:0;
+      padding:0;
+     
+      }
+      h1{
+text-align:center;
+      }
+      .container{
+justify-content:center;
+      align-item:center;
+      display:flex;
+         background-color:#3b5998;
+      max-width:20%;
+      padding:20px;
+      margin:0px auto;}
+      input,button{
+padding:10px;
+      margin:5px;
+       border-radius:5px;
+     }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Facebook Registration Form</h1>
+       <div class="container">
+    <form onsubmit="return validate()">
+      <input id="uname" type="text" placeholder="Enter Username" required>
+      <br>
+      <input id="uemail" type="text" placeholder="Enter Email" required>
+      <br>
+      <input id="pass" type="password" placeholder="Enter password" required>
+    <br>
+      <button type="submit">Submit</button>
+    </form>
+    </div>
+    <script>
+     function validate(){
+var uname=document.getElementById('uname').value;
+       var uemail=document.getElementById('uemail').value;
+var pass=document.getElementById('pass').value;
+        
+        if(uname.length>8)
+          {
+alert("username should not be more than 8 characters."");
+          return false;
+          }
+      if(uemail.includes("@")&&uemail.inlcudes("."))
+        {
+          return true;
+}
+       else{
+alert("enter correct email address");
+       return false;
+       }
+    </script>
+    
+      </body>
+    </html>
+  
