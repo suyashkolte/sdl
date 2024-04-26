@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Railway Time Table</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    @media screen and (max-width: 600px) {
+        table {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<h2>Railway Time Table</h2>
+
+<table>
+  <tr>
+    <th>Train Number</th>
+    <th>Departure</th>
+    <th>Arrival</th>
+    <th>Destination</th>
+  </tr>
+  <tr>
+    <td>12345</td>
+    <td>08:00</td>
+    <td>12:00</td>
+    <td>New York</td>
+  </tr>
+  <tr>
+    <td>54321</td>
+    <td>10:00</td>
+    <td>14:00</td>
+    <td>Los Angeles</td>
+  </tr>
+  <tr>
+    <td>98765</td>
+    <td>12:00</td>
+    <td>16:00</td>
+    <td>Chicago</td>
+  </tr>
+  <tr>
+    <td>56789</td>
+    <td>14:00</td>
+    <td>18:00</td>
+    <td>Miami</td>
+  </tr>
+</table>
+
+</body>
+</html>
