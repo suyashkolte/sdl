@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Login</title>
+</head>
+<body>
+    <div id="signup">
+        <h2>Sign Up</h2>
+        <input type="text" id="signupUsername" placeholder="Username">
+        <input type="password" id="signupPassword" placeholder="Password">
+        <button onclick="signup()">Sign Up</button>
+    </div>
+
+    <div id="login" style="display: none;">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Username">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="welcome" style="display: none;">
+        <h2>Welcome</h2>
+        <p id="welcomeMessage"></p>
+    </div>
+
+    <script>
+        function signup() {
+            var username = document.getElementById("signupUsername").value.trim();
+            var password = document.getElementById("signupPassword").value.trim();
+
+            if (!username || !password) {
+                alert("Please enter both username and password.");
+                return;
+            }
+
+            document.getElementById("signup").style.display = "none";
+            document.getElementById("login").style.display = "block";
+        }
+
+        function login() {
+            var username = document.getElementById("loginUsername").value.trim();
+            var password = document.getElementById("loginPassword").value.trim();
+
+            var storedUsername = document.getElementById("signupUsername").value.trim();
+            var storedPassword = document.getElementById("signupPassword").value.trim();
+
+            if (username !== storedUsername || password !== storedPassword) {
+                alert("Invalid username or password.");
+                return;
+            }
+
+            document.getElementById("login").style.display = "none";
+            document.getElementById("welcome").style.display = "block";
+            document.getElementById("welcomeMessage").textContent = "Welcome, " + storedUsername + "!";
+        }
+    </script>
+</body>
+</html>

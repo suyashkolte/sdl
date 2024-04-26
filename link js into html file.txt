@@ -1,0 +1,44 @@
+html-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples</title>
+</head>
+<body>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+javascript-
+// Task 1: Display an alert
+alert("Hello from script.js!");
+
+// Task 2: Calculate the average number of weeks in a human lifetime
+var averageLifespan = 79; // years
+var weeksInYear = 52;
+var weeksInLifetime = averageLifespan * weeksInYear;
+alert("Average number of weeks in a human lifetime: " + weeksInLifetime);
+
+// Task 3: Create variables to store a string
+var firstName = "John";
+var lastName = "Doe";
+var fullName = firstName + " " + lastName;
+alert("Full name: " + fullName);
+
+// Task 4: Program that tells time of the day (morning, afternoon, night)
+var currentTime = new Date().getHours();
+var timeOfDay;
+
+if (currentTime < 12) {
+    timeOfDay = "morning";
+} else if (currentTime < 18) {
+    timeOfDay = "afternoon";
+} else {
+    timeOfDay = "night";
+}
+
+alert("Time of the day: " + timeOfDay);
